@@ -1,0 +1,57 @@
+.skeleton-wrapper {
+  margin: 0.5rem auto;
+  padding: 1rem, 1.5rem;
+  border-radius: 5px;
+  position: relative;
+  padding-inline: 1rem;
+  overflow: hidden;
+}
+.skeleton-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.skeleton-wrapper.light {
+  background: #f2f2f2;
+}
+
+.skeleton-wrapper.dark {
+  background: #444;
+}
+
+.skeleton-wrapper.dark .skeleton {
+  background: #777;
+}
+
+/* animation effect */
+
+.shimmer-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: loading 2s infinite;
+}
+
+.shimmer {
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  transform: skewX(-20deg);
+  box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.05);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
